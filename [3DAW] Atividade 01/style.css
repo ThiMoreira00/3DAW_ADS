@@ -1,0 +1,19 @@
+
+fieldset {
+    border: none;
+}
+
+button, input[type="submit"] {
+    border: 1px solid black;
+    padding: 1rem;
+    width: 70px;
+}
+
+input[type="submit"] {
+    width: 140px;
+}
+
+input.rst {
+    padding: 1rem;
+    width: 250px;
+}
