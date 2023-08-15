@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(178, 255, 229);
+    padding: 3rem;
+}
+
+h1 {
+    text-align: center;
+    padding-block: 3rem;
+}
+
+form, form > fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+input, label, select {
+    display: block;
+    padding: 0.25rem;
+    width: 20%;
+}
+
+fieldset {
+    border: none;
+    margin: 1rem;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: rgb(0, 43, 43);
+    text-align: center;
+    border: none;
+    padding: 0.5rem;
+    width: 100px;
+    border-radius: 3rem;
+}
