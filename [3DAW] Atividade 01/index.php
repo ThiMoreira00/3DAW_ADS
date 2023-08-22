@@ -64,7 +64,7 @@
                 document.getElementById("operacao").value = operacao;
                 document.getElementById("num1").style.display = "none";
                 document.getElementById("num2").style.display = "block";
-                // document.getElementById("num2").value = document.getElementById("num1").value + document.getElementById("operacao").value;
+                document.getElementById("num2").value = document.getElementById("num1").value + document.getElementById("operacao").value;
                 operacoes++;
                 pos = "num2";
             }
