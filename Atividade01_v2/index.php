@@ -46,7 +46,6 @@
     $resultado = "";
   }
 
-
 ?>
 
 <!DOCTYPE html>
