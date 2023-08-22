@@ -11,7 +11,7 @@
 <body>
   <h1>Calculadora</h1>
 
-  <form method="POST" action="index.php">
+  <form method="POST" action="#">
       <label for="num1">Primeiro número</label>
       <input type="number" name="num1" id="num1">
 
@@ -58,7 +58,7 @@
   if(isset($_POST)) {
 
     $num1 = isset($_POST['num1']) ? $_POST['num1'] : "erro";
-    $op = isset($_POST['op']) ? $_POST['op'] : "erro";
+    $op = isset($_POST['operador']) ? $_POST['operador'] : "erro";
     $num2 = isset($_POST['num2']) ? $_POST['num2'] : "erro";
 
     if($num1 == "erro" || $op == "erro" || $num2 == "erro") {
