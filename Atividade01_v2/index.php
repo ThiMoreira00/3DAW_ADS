@@ -1,6 +1,26 @@
 <?php 
 
 
+  function soma($num1, $num2) {
+    return $num1 + $num2;
+  }
+
+  function subtracao($num1, $num2) {
+    return $num1 - $num2;
+  }
+
+  function multiplicacao($num1, $num2) {
+    return $num1 * $num2;
+  }
+
+  function divisao($num1, $num2) {
+    if($num2 != 0) {
+      return $num1 / $num2;
+    } else {
+      return "ERRO!";
+    }
+  }
+
   if(isset($_POST)) {
 
     $num1 = isset($_POST['num1']) ? $_POST['num1'] : "erro";
@@ -14,22 +34,10 @@
       
       switch($op) {
       
-        case '+': $resultado = $num1 + $num2;
-            break;
-
-        case '-': $resultado = $num1 - $num2;
-            break;
-
-        case '*': $resultado = $num1 * $num2;
-            break;
-
-        case '/': if($num2 != 0) { 
-          $resultado = $num1 / $num2;
-            } else { 
-          $resultado = "ERRO!";
-            }
-            break;
-
+        case '+': $resultado = soma($num1, $num2); break;
+        case '-': $resultado = subtracao($num1, $num2); break;
+        case '*': $resultado = multiplicacao($num1, $num2); break;
+        case '/': $resultado = divisao($num1, $num2); break;
         default: $resultado = "ERRO!";
       }
     }
