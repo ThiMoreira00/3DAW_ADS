@@ -3,11 +3,11 @@
 
   if(isset($_POST)) {
 
-    $num1 = isset($_POST['num1']) ? $_POST['num1'] : false;
-    $op = isset($_POST['op']) ? $_POST['op'] : false;
-    $num2 = isset($_POST['num2']) ? $_POST['num2'] : false;
+    $num1 = isset($_POST['num1']) ? $_POST['num1'] : "erro";
+    $op = isset($_POST['op']) ? $_POST['op'] : "erro";
+    $num2 = isset($_POST['num2']) ? $_POST['num2'] : "erro";
 
-    if($num1 == false || $op == false || $num2 == false) {
+    if($num1 == "erro" || $op == "erro" || $num2 == "erro") {
       $resultado = '';
       
     } else {
@@ -23,7 +23,11 @@
         case '*': $resultado = $num1 * $num2;
             break;
 
-        case '/': $resultado = $num1 / $num2;
+        case '/': if($num2 != 0) { 
+          $resultado = $num1 / $num2;
+            } else { 
+          $resultado = "ERRO!";
+            }
             break;
 
         default: $resultado = "ERRO!";
@@ -87,12 +91,7 @@
     </form>
       </section>
   </main>
-    
     <script>
-
-        // document.getElementById("num2").style.display = "none";
-        // document.getElementById("resultado").style.display = "none";
-
 
         var pos = "resultado";
         var operacoes = 0;
