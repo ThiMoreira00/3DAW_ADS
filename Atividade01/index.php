@@ -98,6 +98,10 @@
         var operando = 1;
 
         function inserir(numero) {
+
+          if(document.getElementById("num1").value == "ERRO!") {
+            alert("Você precisa recarregar a página para usar a calculadora.");
+          } else {
             document.getElementById("resultado").value += numero;
             if(operando == 1) {
               document.getElementById("num1").value += numero;
@@ -105,8 +109,13 @@
               document.getElementById("num2").value += numero;
             }
         }
+        }
 
         function alterarOperacao(operacao) {
+          if(document.getElementById("num1").value == "ERRO!") {
+            alert("Você precisa recarregar a página para usar a calculadora.");
+          } else {
+            
             if(operacoes == 0) {
                 document.getElementById("op").value = operacao;
               
@@ -119,6 +128,8 @@
                 alert("Operação já foi selecionada!");
             }
         }
+          
+          }
 
         
 
