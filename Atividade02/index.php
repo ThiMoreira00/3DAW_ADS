@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,6 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora</title>
+  <style>
+
+    html {
+      height: 100%;
+    }
+    input, select {
+      display: block;
+      margin-block: 0.5rem;
+      padding: 0.5rem;
+      width: 300px;
+    }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    flex-direction: column;
+    background-color: #a1a1a1;
+  }
+
+    form {
+      padding: 2rem;
+      border-radius: 0.5rem;
+      background-color: #717171;
+    }
+  </style>
+  <link rel="stylesheet" href="/Atividade02/style.css">
 </head>
 <body>
   <h1>Calculadora</h1>
@@ -16,6 +41,7 @@
       <input type="number" name="num1" id="num1">
 
       <label for="operador">
+        <label for="operador">Operador</label>
           <select name="operador" id="operador">
             <option value="+">Adição</option>
             <option value="-">Subtração</option>
@@ -27,9 +53,11 @@
             <option value="cos">Cosseno</option>
             <option value="tg">Tangente</option>
         </select>
-        
+
+        <section id="operador2">
         <label for="num2">Segundo número</label>
       <input type="number" name="num2" id="num2">
+        </section>
     <input type="submit" value="Calcular" id="calcular">
     </form>
       <?php 
@@ -88,5 +116,15 @@
 
 echo $resultado;
 ?>
+<script>
+  document.getElementById("operador").addEventListener("change", (event) => {
+
+    if(document.getElementById("operador").value == "sqrt" || document.getElementById("operador").value == "sin" || document.getElementById("operador").value == "cos" || document.getElementById("operador").value == "tg") {
+      document.getElementById("operador2").style.display = "none";
+    } else {
+      document.getElementById("operador2").style.display = "block";
+    }
+});
+</script>
 </body>
 </html>
