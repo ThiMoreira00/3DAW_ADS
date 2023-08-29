@@ -17,7 +17,7 @@
 
   // Percorrendo array/vetor de 0 até a quantidade de elementos no array (função "count")
   for($i=0;$i<count($arr);$i++) {
-    echo "Matéria " .$i . ": " . $arr[$i];
+    echo "Matéria {$i}: {$arr[$i]}";
     echo "<br>";
   }
 

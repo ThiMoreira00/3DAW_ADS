@@ -1,3 +1,13 @@
+<?php
+
+  // TESTANDO REDIRECT 
+  header("Location: login");
+  exit;
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -38,7 +48,7 @@
 
   <form method="POST" action="#">
       <label for="num1">Primeiro número</label>
-      <input type="number" name="num1" id="num1">
+      <input type="number" name="num1" id="num1" required>
 
       <label for="operador">
         <label for="operador">Operador</label>
