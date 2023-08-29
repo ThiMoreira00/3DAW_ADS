@@ -25,7 +25,7 @@
   <title>CRUD - Disciplina</title>
 </head>
 <body>
-  <form action="http://3dawads.thimoreira00.repl.co/Exercício02/index.php" method="POST"> <!-- Precisei adicionar o link direto do repl.it porque não está funcionando por arquivo "local". -->
+  <form action="index.php" method="POST">
     <fieldset>
       <label for="disciplina">Disciplina</label>
       <input type="text" name="disciplina">
