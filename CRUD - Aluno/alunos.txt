@@ -1,0 +1,2 @@
+nome;matricula;email;periodo
+Thiago;22204708360003;thiago.22204708360003@faeterj-rio.edu.br;3
