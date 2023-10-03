@@ -1,0 +1,7 @@
+id;nome;valor
+1;Sabonete;5
+2;Fralda;15
+3;TV;3000
+4;Smartphone;1000
+5;Geladeira;1500
+6;Pão;0.5
